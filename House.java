@@ -2,32 +2,59 @@ import java.util.ArrayList;
 
 public class House extends Building {
 
-  ArrayList<String>
+  private ArrayList<String> residents;
+  private boolean hasDiningRoom;
 
-  public House() {
-    super("Lamont House", "17 Prospect St.", 3);
-    ArrayList<String> residents; // The <String> tells Java what kind of data we plan to store IN the ArrayList
-    private boolean hasDiningRoom;
+  public House(String name, String address, int floors, boolean hasDiningRoom) {
+    super(name, address, floors); 
+    this.hasDiningRoom = hasDiningRoom;
+    this.residents = new ArrayList<String>();
     System.out.println("You have built a house: 🏠");
-  }
+  } 
 
   // checks if there's a dining room in the house 
   public boolean hasDiningRoom() {
-    if (!diningroom :: House) {
-      return false;
-    } else {
-      return true;
-    }
+    return hasDiningRoom;
   }
   
-  
   public int nResidents() {
-    // return num of Residents
-    // return Residents;
+    return residents.size();
+  }
+
+  public void moveIn(String name) {
+    if (!residents.contains(name)) {
+      residents.add(name);
+      System.out.println(name + " has moved in!");
+    } else {
+      System.out.println(name + " already lives here!");
+    }
+  }
+
+  public String moveOut(String name){
+    if (residents.contains(name)) {
+      residents.remove(name);
+      return name + " has move out.";
+    } else {
+      return "Error.";
+    }
+  }
+
+  public boolean isResident(String person) {
+    return residents.contains(person);
   }
 
   public static void main(String[] args) {
-    new House();
+    House Lamont = new House("Lamont House", "17 Prospect St.", 3, true);
+    System.out.println("Lamont has a dining room: " + Lamont.hasDiningRoom());
+    System.out.println("Moving residents in...");
+    Lamont.moveIn("Rachel");
+    Lamont.moveIn("Leah");
+    System.out.println("Lamont has: " + Lamont.nResidents() + " resident(s).");
+    System.out.println("Rachel lives in Lamont: " + Lamont.isResident("Rachel"));
+    System.out.println("Moving a resident out...");
+    Lamont.moveOut("Leah");
+    System.out.println("Lamont has: " + Lamont.nResidents() + " resident(s).");
+    System.out.println("Leah lives in Lamont: " + Lamont.isResident("Leah"));
   }
 
 }

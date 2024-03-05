@@ -1,5 +1,5 @@
 /* This is a stub for the Cafe class */
-public class Cafe {
+public class Cafe extends Building {
 
     public Cafe() {
         System.out.println("You have built a cafe: ☕");
