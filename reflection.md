@@ -8,3 +8,6 @@ I found Inheritance to be very interesting. In a way, I found it made my program
 * Reading through the README in its entirety first always = **
 * Jotting down brief notes while getting the project overview in class helped me find my footing
 * Writing down ideas outside of code on paper 
+
+* Resource for iterating thru hashtable:
+https://www.tutorialspoint.com/how-to-iterate-through-hashtable-in-java

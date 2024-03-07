@@ -2,11 +2,13 @@ import java.util.ArrayList;
 
 public class House extends Building {
 
-  private ArrayList<String> residents;
-  private boolean hasDiningRoom;
+  ArrayList<String> residents;
+  boolean hasElevator; 
+  boolean hasDiningRoom;
 
-  public House(String name, String address, int floors, boolean hasDiningRoom) {
+  public House(String name, String address, int floors, boolean hasDiningRoom, boolean hasElevator) {
     super(name, address, floors); 
+    this.hasElevator = hasElevator;
     this.hasDiningRoom = hasDiningRoom;
     this.residents = new ArrayList<String>();
     System.out.println("You have built a house: 🏠");
@@ -15,6 +17,10 @@ public class House extends Building {
   // checks if there's a dining room in the house 
   public boolean hasDiningRoom() {
     return hasDiningRoom;
+  }
+
+  public boolean hasElevator() {
+    return hasElevator;
   }
   
   public int nResidents() {
@@ -44,8 +50,10 @@ public class House extends Building {
   }
 
   public static void main(String[] args) {
-    House Lamont = new House("Lamont House", "17 Prospect St.", 3, true);
+    House Lamont = new House("Lamont House", "17 Prospect St.", 5, true, true);
+    System.out.println(Lamont);
     System.out.println("Lamont has a dining room: " + Lamont.hasDiningRoom());
+    System.out.println("Lamont has an elevator: " + Lamont.hasElevator());
     System.out.println("Moving residents in...");
     Lamont.moveIn("Rachel");
     Lamont.moveIn("Leah");

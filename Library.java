@@ -1,4 +1,5 @@
 import java.util.Hashtable;
+import java.util.Enumeration;
 
 public class Library extends Building {
 
@@ -9,7 +10,8 @@ public class Library extends Building {
     public Library(String name, String address, int floors) {
       super(name, address, floors); 
       System.out.println("You have built a library: 📖");
-      collection<title, status>;
+      this.collection = new Hashtable<>();
+      Enumeration<String> e = collection.keys();
     }
 
     public void addTitle(String title, Boolean status) {
@@ -33,8 +35,8 @@ public class Library extends Building {
     }
 
     // returns true if the title appears as a key in the Libary's collection, false otherwise
-    public boolean containsTitle(String title, Boolean status) {
-      if (title :: collection) {
+    public boolean containsTitle(String title) {
+      if (collection.contains(title)) {
         return true;
       } else {
         return false;
@@ -50,7 +52,13 @@ public class Library extends Building {
     // prints out the entire collection in an easy-to-read way (including checkout status)
     public void printCollection() {
       // nice formatting here \/\/\/\/
-      System.out.println(collection);
+      System.out.println("------------");
+      System.out.println("Neilson Library's Collection:");
+      // figuring out iterating over a hashtable: https://www.tutorialspoint.com/how-to-iterate-through-hashtable-in-java
+      for (i :: e) {
+        System.out.println(title);
+      System.out.println("------------");
+      }
     }
 
     public static void main(String[] args) {
@@ -58,6 +66,8 @@ public class Library extends Building {
       Neilson.addTitle("Animal Farm by George Orwell", true);
       Neilson.addTitle("Don Quixote by Miguel de Cervantes", true);
       Neilson.addTitle("Dune by Frank Herbert", true);
+      Neilson.printCollection();
+      System.out.println("Animal Farm is in the collection: " + Neilson.containsTitle("Animal Farm by George Orwell"));
     }
   
   }
