@@ -26,7 +26,7 @@ public class House extends Building {
       residents.add(name);
       System.out.println(name + " has moved in!");
     } else {
-      System.out.println(name + " already lives here!");
+      throw new RuntimeException(name + " already lives here!");
     }
   }
 
@@ -35,7 +35,7 @@ public class House extends Building {
       residents.remove(name);
       return name + " has move out.";
     } else {
-      return "Error.";
+      throw new RuntimeException(name + " doesn't live in this house.");
     }
   }
 

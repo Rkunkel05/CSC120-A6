@@ -1,37 +1,39 @@
-/* This is a stub for the Library class */
-
 import java.util.Hashtable;
 
 public class Library extends Building {
 
   private Hashtable<String, Boolean> collection;
   String title;
+  Boolean status;
 
     public Library(String name, String address, int floors) {
       super(name, address, floors); 
       System.out.println("You have built a library: 📖");
-      Hashtable<String, boolean>;
+      collection<title, status>;
     }
 
-    public void addTitle(String title, boolean); {
-      collection.put(key, value);
+    public void addTitle(String title, Boolean status) {
+      collection.put(title, status);
     }
 
-    public String removeTitle(String title, boolean); { // return the title that we removed
-      Hash_Table.remove(key, value);
+    public String removeTitle(String title, Boolean status) { // return the title that we removed
+      collection.remove(title, status);
       return title;
     }
 
-    public void checkOut(String title);{
-
+    public void checkOut(String title, Boolean status) {
+      // check if book is in library 
+      // if book is -> update boolean of specified title to false (check out)
+      // if book is not in the library -> error
     }
 
-    public void returnBook(String title); {
-
+    public void returnBook(String title, Boolean status) {
+      // if book is not in library -> update boolean of specified title to true (return)
+      // if book is in the library -> error 
     }
 
     // returns true if the title appears as a key in the Libary's collection, false otherwise
-    public boolean containsTitle(String title) {
+    public boolean containsTitle(String title, Boolean status) {
       if (title :: collection) {
         return true;
       } else {
@@ -40,12 +42,14 @@ public class Library extends Building {
     }
     
     // returns true if the title is currently available, false otherwise
-    public boolean isAvailable(String title) {
-
+    public boolean isAvailable(String title, Boolean status) {
+      // checks boolean of given title
+      return status; 
     }
 
     // prints out the entire collection in an easy-to-read way (including checkout status)
     public void printCollection() {
+      // nice formatting here \/\/\/\/
       System.out.println(collection);
     }
 
@@ -54,8 +58,6 @@ public class Library extends Building {
       Neilson.addTitle("Animal Farm by George Orwell", true);
       Neilson.addTitle("Don Quixote by Miguel de Cervantes", true);
       Neilson.addTitle("Dune by Frank Herbert", true);
-
-
     }
   
   }
