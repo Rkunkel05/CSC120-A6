@@ -17,10 +17,10 @@ public class Cafe extends Building {
     }
 
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
-        this.nCoffeeOunces = nCoffeeOunces;
-        this.nSugarPackets = nSugarPackets;
-        this.nCreams = nCreams;
-        this.nCups = nCups;
+        this.nCoffeeOunces += nCoffeeOunces;
+        this.nSugarPackets += nSugarPackets;
+        this.nCreams += nCreams;
+        this.nCups += nCups;
     }
 
     // Confused by this... Erm...
