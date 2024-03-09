@@ -31,7 +31,7 @@ public class Library extends Building {
     // Checks if title is in library -> Updates status to false, otherwise prints error
     // BUG - checkOut status is not updating ):
     public void checkOut(String title) {
-      if (collection.containsKey(title) & collection.get(title)) {
+      if (collection.containsKey(title) && collection.get(title)) {
         collection.put(title, false);
       } else {
         throw new RuntimeException(title + "is already checked out!");
@@ -40,7 +40,7 @@ public class Library extends Building {
 
     // Checks if title is out of library -> Updates status to true, otherwise prints error
     public void returnBook(String title) {
-      if (!collection.containsKey(title) & collection.get(title)) {
+      if (collection.containsKey(title) && !collection.get(title)) {
         collection.put(title, true);
       } else {
         throw new RuntimeException(title + "is already returned!");
@@ -60,9 +60,9 @@ public class Library extends Building {
     // BUG - isAvailable is not updating to false ):
     public boolean isAvailable(String title) {
       if (collection.containsKey(title) && collection.containsValue(true)) {
-        return true;
+        return collection.get(title);
       } else {
-        return false;
+        return collection.get(title);
       }
     }
 
@@ -88,20 +88,29 @@ public class Library extends Building {
     public static void main(String[] args) {
       Library Neilson = new Library("Neilson Library", "7 Neilson Drive", 5);
       System.out.println(Neilson);
+      // Adding books to collection
       Neilson.addTitle("Animal Farm by George Orwell", true);
       Neilson.addTitle("Don Quixote by Miguel de Cervantes", true);
       Neilson.addTitle("Dune by Frank Herbert", true);
+      // Print collection
       Neilson.printCollection();
+      // Check if books are in collection & their availability 
       System.out.println("Animal Farm is in the collection: " + Neilson.containsTitle("Animal Farm by George Orwell"));
       System.out.println("Don Quixote is available to check out: " + Neilson.isAvailable("Don Quixote by Miguel de Cervantes"));
+      // Checking out a book
       System.out.println("Checking out book...");
       Neilson.checkOut("Don Quixote by Miguel de Cervantes");
-      // BUG - isAvailable is not updating to false ):
       System.out.println("Don Quixote is available to check out: " + Neilson.isAvailable("Don Quixote by Miguel de Cervantes"));
       Neilson.printCollection();
+      // Returning a book
       System.out.println("Returning book...");
-      // BUG - returnBook being werd womp womp </3
       Neilson.returnBook("Don Quixote by Miguel de Cervantes");
+      // Print collection
+      Neilson.printCollection();
+      // Removing a book from the collection
+      Neilson.removeTitle("Dune by Frank Herbert");
+      System.out.println("Removing book...");
+      Neilson.printCollection();
     }
   
   }
