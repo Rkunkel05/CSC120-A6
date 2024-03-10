@@ -16,8 +16,8 @@ public class House extends Building {
 
   /**
       "Builds" a house
-      @param String name is a String of the name of the cafe
-      @param String address is String of the address of the cafe
+      @param String name is a String of the name of the house
+      @param String address is String of the address of the house
       @param boolean is whether or not the house has a dining room
       @param boolean is whether or not the house has an elevator
     **/

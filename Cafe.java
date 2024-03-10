@@ -20,10 +20,10 @@ public class Cafe extends Building {
       @param String name is a String of the name of the cafe
       @param String address is String of the address of the cafe
       @param int floor is an int with the number of floors in the cafe
-      @param int nCoffeeOunces is an int with the number of coffee ounces in the store
-      @param int nSugarPackets is an int with the number of sugar packets in the store
-      @param int nCups is an int with the number of cups in the store
-      @param int nCreams is an int with the number of 'splashes' of coffee in the store
+      @param int nCoffeeOunces is an int with the number of coffee ounces in the cafe
+      @param int nSugarPackets is an int with the number of sugar packets in the cafe
+      @param int nCups is an int with the number of cups in the cafe
+      @param int nCreams is an int with the number of 'splashes' of coffee in the cafe
     **/
     public Cafe(String name, String address, int floors, int nCoffeeOunces, int nSugarPackets, int nCups, int nCreams) {
         super(name, address, floors); 
@@ -35,11 +35,11 @@ public class Cafe extends Building {
     }
 
     /**
-      Adds "new" stock
-      @param int nCoffeeOunces is an int with the number of coffee ounces in the store
-      @param int nSugarPackets is an int with the number of sugar packets in the store
-      @param int nCups is an int with the number of cups in the store
-      @param int nCreams is an int with the number of 'splashes' of coffee in the store
+      Adds stock
+      @param int nCoffeeOunces is an int with the number of coffee ounces in the cafe
+      @param int nSugarPackets is an int with the number of sugar packets in the cafe
+      @param int nCups is an int with the number of cups in the cafe
+      @param int nCreams is an int with the number of 'splashes' of coffee in the cafe
     **/
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
         this.nCoffeeOunces += nCoffeeOunces;
@@ -49,12 +49,12 @@ public class Cafe extends Building {
     }
 
     /**
-      "Makes" coffee by subtracting the amount requested from stock. If there is not enoug, it calls on
-      restock().
-      @param int nCoffeeOunces is an int with the number of coffee ounces in the store
-      @param int nSugarPackets is an int with the number of sugar packets in the store
-      @param int nCups is an int with the number of cups in the store
-      @param int nCreams is an int with the number of 'splashes' of coffee in the store
+      "Makes" coffee by subtracting the amount requested from stock. If there is not enough, it calls on
+      the restock method.
+      @param int nCoffeeOunces is an int with the number of coffee ounces in the cafe
+      @param int nSugarPackets is an int with the number of sugar packets in the cafe
+      @param int nCups is an int with the number of cups in the cafe
+      @param int nCreams is an int with the number of 'splashes' of coffee in the cafe
     **/
     public void sellCoffee(int size, int nSugarPackets, int nCreams) {
         if (size <= nCoffeeOunces && nSugarPackets <= this.nSugarPackets && nCreams <= this.nCreams) {
