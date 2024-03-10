@@ -1,3 +1,11 @@
+/**
+   * Filename: House.java
+* Description: Creates a House utilizing the parent class Building. Contains a name, address, number of floors,
+as well as booleans for whether or not the building has a dining room or an elevator.
+     * Author: Rachel Kunkel
+      *  Date: 10 March 2024  
+*/
+
 import java.util.ArrayList;
 
 public class House extends Building {
@@ -6,6 +14,13 @@ public class House extends Building {
   boolean hasElevator; 
   boolean hasDiningRoom;
 
+  /**
+      "Builds" a house
+      @param String name is a String of the name of the cafe
+      @param String address is String of the address of the cafe
+      @param boolean is whether or not the house has a dining room
+      @param boolean is whether or not the house has an elevator
+    **/
   public House(String name, String address, int floors, boolean hasDiningRoom, boolean hasElevator) {
     super(name, address, floors); 
     this.hasElevator = hasElevator;
@@ -14,19 +29,30 @@ public class House extends Building {
     System.out.println("You have built a house: 🏠");
   } 
 
-  // checks if there's a dining room in the house 
+  /** Checks if the house has a dining room
+  // @return boolean that confirms whether or not the house has a dining room
+  */
   public boolean hasDiningRoom() {
     return hasDiningRoom;
   }
 
+  /** Checks if the house has an elevator
+  // @return boolean that confirms whether or not the house has an elevator
+  */
   public boolean hasElevator() {
     return hasElevator;
   }
   
+  /** Checks the number of residents in the house
+  // @return int with the size of the residents list 
+  */
   public int nResidents() {
     return residents.size();
   }
 
+  /** Adds a resident to the house. Throws error if they already live there. 
+  // @param String name is the name of the resident being added.
+  */
   public void moveIn(String name) {
     if (!residents.contains(name)) {
       residents.add(name);
@@ -36,6 +62,9 @@ public class House extends Building {
     }
   }
 
+  /** Moves a resident out of the house. Throws an error if they don't live there.
+  // @param String name is the name of the resident being removed.
+  */
   public String moveOut(String name){
     if (residents.contains(name)) {
       residents.remove(name);
@@ -45,6 +74,10 @@ public class House extends Building {
     }
   }
 
+  /** Checks if a name is in the list of residents. 
+  // @param String name is the name of the resident being removed.
+  // @return boolean is whether or not the person is a resident.
+  */
   public boolean isResident(String person) {
     return residents.contains(person);
   }

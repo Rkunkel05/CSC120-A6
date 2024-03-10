@@ -44,7 +44,7 @@ _____ 1 pt: The `Cafe` class uses the `restock(...)` method to avoid running out
 
 **YES** 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-**PART** 2 pt: Complies with style guidelines (missing items 1 pt each):
+**YES** 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       _____ Classes & class members all have Javadoc header comments
 
@@ -56,6 +56,6 @@ _____ 1 pt: The `Cafe` class uses the `restock(...)` method to avoid running out
 
       _____ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission (including completed `rubric.md` file)
+**YES** 1 pt: All required files included with submission (including completed `rubric.md` file)
 
-_____ 1 pt: `reflection.md` contains your reflection on the assignment
+**YES** 1 pt: `reflection.md` contains your reflection on the assignment

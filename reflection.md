@@ -1,13 +1,7 @@
 Use this file to record your reflection on this assignment.
 
 - What are your initial impressions of how `Inheritance` affects your programming?
-I found Inheritance to be very interesting. In a way, I found it made my programming almost a little easier. For instance, I didn't have to write new code each time I wanted to make a new building. Instead, I could just call on the Building parent class to help with that. I'm not entirely sure I completely understand all of Inheritance, but I was at least apply to apply it to an extent!
-- Very "squishy" still - I feel like I understand parts of it in theory, but other parts not so much
+I found Inheritance to be very interesting. In a way, it made my programming significantly easier because I didn't have to write as much and could just call on one singular parent to do all of the work. I'm curious to see how else it will be applied! 
 
 - What worked, what didn't, what advice would you give someone taking this course in the future?
-* Reading through the README in its entirety first always = **
-* Jotting down brief notes while getting the project overview in class helped me find my footing
-* Writing down ideas outside of code on paper 
-
-* Resource for iterating thru hashtable:
-https://www.tutorialspoint.com/how-to-iterate-through-hashtable-in-java
+Reading through the README in its entirety is the first thing you should always do. It helps to understand the entire project instead of coding as you read through the file. Also, jotting down brief notes while getting the project overview in class helped me find my footing. It's useful to have little notes throughout my code on where I should start with my code. 
